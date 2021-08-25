@@ -8,9 +8,13 @@
 
 // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
-const sumSD = (num) => {
+const solution = (num) => {
   let squaresSum = 0;
-  let sumSquared = (num * (num - 1)) / 2;
+  let sumSquared = ((num * (num + 1)) / 2) ** 2;
 
-  console.log(sumSquared);
+  for (let i = 1; i <= num; i++) {
+    squaresSum += i * i;
+  }
+
+  console.log(sumSquared - squaresSum);
 };

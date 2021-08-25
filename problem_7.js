@@ -16,7 +16,7 @@ const nthPrime = (n) => {
 };
 
 function isPrime(num) {
-  let factors = [1, num];
+  let factors = [];
 
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) {
@@ -29,7 +29,7 @@ function isPrime(num) {
     }
   }
 
-  return factors.length === 2;
+  return factors.length === 0;
 }
 
 nthPrime(10001);
